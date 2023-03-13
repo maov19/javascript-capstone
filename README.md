@@ -1,2 +1,2 @@
 # kanban
-This repo is to setup a Kanban board for the Module 2 Capstone project of Microverse
+This repo was created to create the Module 2 Capstone project of Microverse
