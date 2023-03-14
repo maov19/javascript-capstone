@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    buldle: path.resolve(__dirname, './src/index.js')
+    buldle: path.resolve(__dirname, './src/index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
     clean: true,
-    assetModuleFilename: '[name][ext]'
+    assetModuleFilename: '[name][ext]',
   },
   devtool: 'source-map',
   devServer: {
@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|svg|jpeg|giff)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
       },
     ],
   },
