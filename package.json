@@ -1,0 +1,35 @@
+{
+  "name": "javascript-capstone",
+  "version": "1.0.0",
+  "description": "This repo was created to create the Module 2 Capstone project of Microverse",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maov19/javascript-capstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maov19/javascript-capstone/issues"
+  },
+  "homepage": "https://github.com/maov19/javascript-capstone#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "daisyui": "^2.51.3",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.5.0",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^8.0.1",
+    "style-loader": "^3.3.2",
+    "tailwindcss": "^3.2.7",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
