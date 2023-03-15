@@ -1,4 +1,5 @@
 import Involvement from "./involvement.js";
+import titleCounter from "../titles-counter.js";
 const involve = new Involvement();
 
 class Anime {
@@ -25,6 +26,7 @@ class Anime {
     if (items.length === 0) return;
     items.forEach((item) => {
       results.innerHTML += `
+              <div class="card-container">
                 <div id="${item.id}"  class="card w-96 bg-dark-100 shadow-xl flex justify-between">
                     <figure class="px-10 pt-10">
                         <img id="avatar" alt="no internet" class="rounded-xl" src="${item.image.original}" />
@@ -38,8 +40,9 @@ class Anime {
                         </div>
                     </div>
                 </div>
+              </div>
             `;
-    window.onload = function(){
+    titleCounter()
     const card = document.getElementById(item.id);
     card.addEventListener('click', (event) => {
       if (event.target.id === `like-button_${item.id}`) {
@@ -52,7 +55,6 @@ class Anime {
         });
       } 
     }) 
-    }
   });
     involve.displayLikes();
   }
