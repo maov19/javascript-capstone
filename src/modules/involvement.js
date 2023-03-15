@@ -1,4 +1,4 @@
-// fix the posting method first
+// fix the posting method for this to work
 
 class Involvement {
   constructor() {
@@ -43,5 +43,21 @@ class Involvement {
         });
     };
 }
+
+// this is the function im trying to post, but its not working properly
+// async function postMethod(data) {
+//   const apiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+
+//   const response = await fetch(apiUrl, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(data),
+//   });
+
+//   const responseData = await response.json();
+//   console.log(responseData);
+// }
 
 export default Involvement;
