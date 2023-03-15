@@ -1,4 +1,4 @@
-import popupComment from "./popupComment.js";
+import popupComment from './popupComment.js';
 
 class Anime {
   constructor() {
@@ -28,7 +28,7 @@ class Anime {
             <img id="avatar" alt="no internet" class="rounded-xl" src="${item.image.medium}" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title text-white font-semibold text-3xl">${item.name}</h2>
+            <h2 class="card-title text-black font-semibold text-3xl">${item.name}</h2>
             <span>Rating: ${item.rating.average}</span>
             <div class="card-actions commentButton">
               <button class="btn btn-primary commentBtn" data-id="${item.id}">Comment</button>
@@ -40,17 +40,16 @@ class Anime {
       `;
     });
 
-    // Add event listener to comment buttons
     const commentButtons = document.querySelectorAll('.commentBtn');
-    const popupWindow = document.getElementById('popupWindow')
+    const popupWindow = document.getElementById('popupWindow');
     commentButtons.forEach((button) => {
       button.addEventListener('click', () => {
-        popupWindow.classList.remove('hidden')
         const showId = button.dataset.id;
         this.getShowDetails(showId)
           .then((details) => {
-
+            console.log(details);
             popupComment(details);
+            if (popupWindow) { popupWindow.classList.remove('hidden'); }
           })
           .catch((error) => console.error(error));
       });
