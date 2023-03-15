@@ -6,4 +6,5 @@ import Involvement from './modules/involvement';
 
 const headerLogo = document.getElementById('logo');
 headerLogo.src = Logo;
+
 displayAllAnime();
