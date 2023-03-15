@@ -1,8 +1,6 @@
-// fix the posting method for this to work
-
 class Involvement {
   constructor() {
-    this.apiId = '123456';
+    this.apiId = 'VASVN7B36M4wHn663o4j';
     this.likesApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${this.apiId}/likes/`;
   }
 
@@ -25,39 +23,23 @@ class Involvement {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          item_id: id,
+          item_id: 'item1',
         }),
       });
     };
 
     // display likes on webpage, combined with base api
-    displayLikes = () => {
-      this.getLikes()
-        .then((item) => {
-          item.forEach((element) => {
-            const like = document.getElementById('likes');
-            if (like) {
-              like.textContent = `${element.likes}`;
-            }
-          });
-        });
-    };
+    // displayLikes = () => {
+    //   this.getLikes()
+    //     .then((item) => {
+    //       item.forEach((element) => {
+    //         const likes = document.getElementById(`likes_${element.item_id.replace('like-button', '')}`,)
+    //         if (likes) {
+    //           likes.textContent = `${element.likes} Likes`;
+    //         }
+    //       });
+    //     });
+    // };
 }
-
-// this is the function im trying to post, but its not working properly
-// async function postMethod(data) {
-//   const apiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
-
-//   const response = await fetch(apiUrl, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(data),
-//   });
-
-//   const responseData = await response.json();
-//   console.log(responseData);
-// }
 
 export default Involvement;
