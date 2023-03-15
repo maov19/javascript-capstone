@@ -30,7 +30,7 @@ class Anime {
                         <span>${item.rating}</span>
                         <div class="card-actions">
                             <button class="btn btn-primary">Comment</button>
-                            <i  class="fa-solid fa-heart btn btn-secondary text-2xl font-bold"></i> <span class="text-4xl">1</span> 
+                            <i  class="fa-solid fa-heart btn btn-secondary text-2xl font-bold"></i> <span id="likes" class="text-4xl">1</span> 
                         </div>
                     </div>
                 </div>
