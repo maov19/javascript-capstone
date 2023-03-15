@@ -5,4 +5,5 @@ import displayAllAnime from './modules/displayAllAnime.js';
 
 const headerLogo = document.getElementById('logo');
 headerLogo.src = Logo;
+
 displayAllAnime();
