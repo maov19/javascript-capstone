@@ -1,5 +1,5 @@
 import popupComment from './popupComment.js';
-import titleCounter from './title-counter.js'
+import titleCounter from './title-counter.js';
 
 class Anime {
   constructor() {
@@ -43,7 +43,7 @@ class Anime {
       `;
     });
 
-  titleCounter()
+    titleCounter();
 
     const commentButtons = document.querySelectorAll('.commentBtn');
     const popupWindow = document.getElementById('popupWindow');
