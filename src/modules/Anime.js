@@ -1,26 +1,26 @@
 class Anime {
-    constructor() {
-        this.baseURL = 'https://api.tvmaze.com';
-    }
+  constructor() {
+    this.baseURL = 'https://api.tvmaze.com';
+  }
 
-    getShows() {
-        return fetch(`${this.baseURL}/shows`)
-            .then(response => response.json())
-            .catch(error => console.error(error));
-    }
+  getShows() {
+    return fetch(`${this.baseURL}/shows`)
+      .then((response) => response.json())
+      .catch((error) => console.error(error));
+  }
 
-    getAnimes() {
-        return this.getShows()
-            .then(shows => shows.slice(50, 90))
-            .catch(error => console.error(error));
-    }
+  getAnimes() {
+    return this.getShows()
+      .then((shows) => shows.slice(50, 90))
+      .catch((error) => console.error(error));
+  }
 
-    displayAnime(items) {
-        let results = document.getElementById('display-container');
-        results.innerHTML = '';
-        if (items.length === 0) return;
-        items.forEach(item => {
-            results.innerHTML += `
+  displayAnime = (items) => {
+    const results = document.getElementById('display-container');
+    results.innerHTML = '';
+    if (items.length === 0) return;
+    items.forEach((item) => {
+      results.innerHTML += `
                 <div class="card w-96 bg-dark-100 shadow-xl flex justify-between">
                     <figure class="px-10 pt-10">
                         <img id="avatar" alt="no internet" class="rounded-xl" src="${item.image.original}" />
@@ -35,8 +35,8 @@ class Anime {
                     </div>
                 </div>
             `;
-        });
-    }
+    });
+  }
 }
 
 export default Anime;

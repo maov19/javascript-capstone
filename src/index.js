@@ -1,9 +1,8 @@
-import './index.css'
-import Logo from './assets/animelogo.jpg'
+import './index.css';
+import Logo from './assets/animelogo.jpg';
 
-const headerLogo = document.getElementById('logo')
-headerLogo.src = Logo
+import displayAllAnime from './modules/displayAllAnime.js';
 
-
-import displayAllAnime from './modules/displayAllAnime.js'
-displayAllAnime()
+const headerLogo = document.getElementById('logo');
+headerLogo.src = Logo;
+displayAllAnime();
