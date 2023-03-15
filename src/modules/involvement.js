@@ -1,15 +1,14 @@
-//fix the posting method first
+// fix the posting method first
 
 class Involvement {
   constructor() {
     this.apiId = '123456';
-
-    this.likesApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${apiId}/likes/`;
+    this.likesApi = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${this.apiId}/likes/`;
   }
 
-    //get likes from involvement
+    // get likes from involvement
     getLikes = async () => {
-      const likes = await fetch(likesApi);
+      const likes = await fetch(this.likesApi);
       const response = await likes.json();
 
       if (!likes.ok) return undefined;
@@ -17,9 +16,9 @@ class Involvement {
       return response;
     };
 
-    //post likes to involvement
+    // post likes to involvement
     postLikes = async (id) => {
-      await fetch(likesApi, {
+      await fetch(this.likesApi, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
@@ -31,17 +30,18 @@ class Involvement {
       });
     };
 
-    //display likes on webpage, combined with base api
+    // display likes on webpage, combined with base api
     displayLikes = () => {
-    const list = document.querySelector('.display-container');
-      getLikes().then((item) => {
-        item.forEach((element) => {
-          const like = document.getElementById('likes');
-          if (like) {
-            like.textContent = `${element.likes}`;
-          }
+      this.getLikes()
+        .then((item) => {
+          item.forEach((element) => {
+            const like = document.getElementById('likes');
+            if (like) {
+              like.textContent = `${element.likes}`;
+            }
+          });
         });
-      });
     };
 }
 
+export default Involvement;
