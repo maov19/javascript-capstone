@@ -1,4 +1,4 @@
-
+import popupComment from "./popupComment.js";
 
 class Anime {
   constructor() {
@@ -43,16 +43,14 @@ class Anime {
     // Add event listener to comment buttons
     const commentButtons = document.querySelectorAll('.commentBtn');
     const popupWindow = document.getElementById('popupWindow')
-    const closeWindow = document.querySelector('closeWindow')
     commentButtons.forEach((button) => {
       button.addEventListener('click', () => {
         popupWindow.classList.remove('hidden')
-        closeWindow.classList.add('hidden')
         const showId = button.dataset.id;
         this.getShowDetails(showId)
           .then((details) => {
 
-            console.log(details);
+            popupComment(details);
           })
           .catch((error) => console.error(error));
       });
