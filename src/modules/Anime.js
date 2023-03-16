@@ -38,7 +38,7 @@ class Anime {
             <div class="card-actions commentButton">
               <button class="btn btn-primary commentBtn" data-id="${item.id}">Comment</button>
               <i id="${item.id}" class="fa-solid fa-heart btn btn-secondary text-2xl font-bold"></i> 
-              <span id="likes-${item.id}" class="text-4xl"></span> 
+              <span id="likes-${item.id}" class="text-4xl">0</span> 
             </div>
           </div>
         </div>
