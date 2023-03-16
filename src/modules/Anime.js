@@ -1,4 +1,8 @@
 import popupComment from './popupComment.js';
+import titleCounter from './title-counter.js';
+import Involvement from './involvement.js';
+
+const involve = new Involvement();
 
 class Anime {
   constructor() {
@@ -23,6 +27,7 @@ class Anime {
     if (items.length === 0) return;
     items.forEach((item) => {
       results.innerHTML += `
+      <div class='card-container'>
         <div class="card w-96 bg-dark-100 shadow-xl flex justify-between">
           <figure class="px-10 pt-10">
             <img id="avatar" alt="no internet" class="rounded-xl" src="${item.image.medium}" />
@@ -32,13 +37,16 @@ class Anime {
             <span>Rating: ${item.rating.average}</span>
             <div class="card-actions commentButton">
               <button class="btn btn-primary commentBtn" data-id="${item.id}">Comment</button>
-              <i class="fa-solid fa-heart btn btn-secondary text-2xl font-bold"></i> 
-              <span class="text-4xl">1</span> 
+              <i id="${item.id}" class="fa-solid fa-heart btn btn-secondary text-2xl font-bold"></i> 
+              <span id="likes-${item.id}" class="text-4xl">0</span> 
             </div>
           </div>
         </div>
+    </div>
       `;
     });
+
+    titleCounter();
 
     const commentButtons = document.querySelectorAll('.commentBtn');
     const popupWindow = document.getElementById('popupWindow');
@@ -54,6 +62,16 @@ class Anime {
           .catch((error) => console.error(error));
       });
     });
+
+    const likeButtons = document.querySelectorAll('.fa-heart');
+    likeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        involve.postLikes(button.id)
+          .then(() => involve.displayLikes())
+          .catch((error) => console.error(error));
+      });
+    });
+    involve.displayLikes();
   }
 
   getShowDetails(showId) {
