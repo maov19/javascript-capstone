@@ -1,7 +1,8 @@
 import popupComment from './popupComment.js';
 import titleCounter from './title-counter.js';
-import Involvement from './involvement.js'
-const involve = new Involvement;
+import Involvement from './involvement.js';
+
+const involve = new Involvement();
 
 class Anime {
   constructor() {
@@ -62,20 +63,19 @@ class Anime {
       });
     });
 
-
-  const likeButtons = document.querySelectorAll('.fa-heart');
-  likeButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      console.log(button.id)
-      involve.postLikes(button.id)
-        .then(() => button.style.color = 'blue')
-        involve.displayLikes()
-        // .catch(() => button.style.color = 'blue')
-  //POST a like to the api item.id
-  //GET the api info and display it on main
-    })
-  }) 
-  involve.displayLikes()
+    const likeButtons = document.querySelectorAll('.fa-heart');
+    likeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        // console.log(button.id);
+        involve.postLikes(button.id);
+        // .then(() => button.style.color = 'red');
+        involve.displayLikes();
+        // .catch(() => button.style.color = 'red')
+        // POST a like to the api item.id
+        // GET the api info and display it on main
+      });
+    });
+    involve.displayLikes();
   }
 
   getShowDetails(showId) {
@@ -83,7 +83,6 @@ class Anime {
       .then((response) => response.json())
       .catch((error) => console.error(error));
   }
-
 }
 
 export default Anime;

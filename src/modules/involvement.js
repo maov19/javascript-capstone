@@ -33,7 +33,7 @@ class Involvement {
       this.getLikes()
         .then((item) => {
           item.forEach((element) => {
-            const likes = document.getElementById(`likes-${element.item_id}`,)
+            const likes = document.getElementById(`likes-${element.item_id}`);
             if (likes) {
               likes.textContent = `${element.likes}`;
             }
