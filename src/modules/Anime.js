@@ -66,13 +66,9 @@ class Anime {
     const likeButtons = document.querySelectorAll('.fa-heart');
     likeButtons.forEach((button) => {
       button.addEventListener('click', () => {
-        // console.log(button.id);
-        involve.postLikes(button.id);
-        // .then(() => button.style.color = 'red');
-        involve.displayLikes();
-        // .catch(() => button.style.color = 'red')
-        // POST a like to the api item.id
-        // GET the api info and display it on main
+        involve.postLikes(button.id)
+          .then(() => involve.displayLikes())
+          .catch((error) => console.error(error));
       });
     });
     involve.displayLikes();
