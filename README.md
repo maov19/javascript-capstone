@@ -25,13 +25,14 @@
 
 # 📖 [Leaderboard] <a name="about-project"></a>
 
-A simple application to show the names and positions of leading competitors in a competions, most especially a golf tournament.
+A single page app that displays a list of TV series. You can add likes and comments.
 
 ## 🛠 Built With 
 
 - HTML
 - JS
 - Tailwind CSS
+- API dependdencies
 
 ### Tech Stack <a name="tech-stack">N/A</a>
 
@@ -59,15 +60,16 @@ A simple application to show the names and positions of leading competitors in a
 <!-- Features -->
 
 ### Key Feature <a name="key-features"></a>
- - Displays list of names and positions of leading competitors.
+ - Display TV titles, images and rankings
+ - Add and store likes
+ - Add and store comments
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - **GitHub Pages:**
-
-- [N/A]()
+Coming soon!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
@@ -90,7 +92,7 @@ To get the content of this project locally you need to run the following command
 
 1. Download the **Zip** file or clone the repo with:
 ```bash
-git clone https://github.com/shafiuyushawu/leaderboard
+git clone https://github.com/maov19/javascript-capstone/
 ```
 2. To access cloned directory run:
 ```bash
@@ -144,26 +146,30 @@ npx eslint .
 
 You can deploy this project using:
 
-- N/A
-
+-Coming soon!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHOR -->
 
-## 👥 Author: <a name="authors">Shafiu Ibn Yushawu</a>
+## 👥 Author: <a name="authors"></a>
 
 👤 **Authors**
 
-- GitHub: [@shafiuyushawu](https://github.com/shafiuyushawu),
+Shafiu Ibn Yushawu
+- GitHub: [@shafiuyushawu](https://github.com/shafiuyushawu)
+Martin Ossa
 - Twitter: [@shafiuyushawu](https://twitter.com/shafiuyushawu)
+
+- GitHub: [@maov19](https://github.com/maov19),
+- Twitter: [@maov08](https://twitter.com/@maov08)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Implement functionality for user to enter names.
-- Create functionality for displaying names and scores entered by users.
+- Adapt for mobile version
+- Link to IMDB
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,7 +179,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-[Kindly raise issue here](https://github.com/hiwina/Awesome-Book/issues)
+[Kindly raise issue here](https://github.com/maov19/javascript-capstone/issues)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,6 +202,6 @@ If you like this project, kindly follow me on GitHub 😊
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./License) licensed.
+This project is [MIT](https://github.com/maov19/javascript-capstone/blob/development/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
