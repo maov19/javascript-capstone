@@ -2,3 +2,4 @@ node_modules
 tailwind.config.js
 webpack.config.js
 postcss.config.js
+displayComments.js

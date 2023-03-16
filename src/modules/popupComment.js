@@ -1,5 +1,4 @@
-
-import addComments from './addComments.js'
+import addComments from './addComments.js';
 
 const popupComment = (movieDetails) => {
   const main = document.getElementById('main');
@@ -64,17 +63,17 @@ const popupComment = (movieDetails) => {
 
   const commentForm = document.createElement('form');
   commentForm.className = 'grid grid-rows-1';
-  commentForm.id = 'commentForm'
+  commentForm.id = 'commentForm';
   const inputName = document.createElement('input');
-  inputName.id = 'inputName'
+  inputName.id = 'inputName';
   inputName.className = 'px-3 border-2 border-black input input-primary placeholder:text-black';
   inputName.placeholder = 'Your name';
   const inputComment = document.createElement('textarea');
-  inputComment.id = 'inputComment'
+  inputComment.id = 'inputComment';
   inputComment.className = 'textarea te4xtarea-primary';
   inputComment.placeholder = 'Your name';
   const addButton = document.createElement('button');
-  addButton.type = 'submit'
+  addButton.type = 'submit';
   addButton.className = 'px-3 py-1 btn btn-sm btn-success ';
   addButton.innerText = 'Comment';
   container.appendChild(commentForm);
@@ -82,15 +81,13 @@ const popupComment = (movieDetails) => {
   commentForm.appendChild(inputComment);
   commentForm.appendChild(addButton);
 
-
-
   const popupWindow = document.getElementById('popupWindow');
   popupWindow.classList.remove('hidden');
   const closeBtn = document.getElementById('closeBtn');
   closeBtn.addEventListener('click', () => {
     if (popupWindow) { popupWindow.classList.add('hidden'); }
   });
-  addComments()
+  addComments();
 };
 
 export default popupComment;
