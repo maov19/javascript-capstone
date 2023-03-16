@@ -1,5 +1,7 @@
 import popupComment from './popupComment.js';
 import titleCounter from './title-counter.js';
+import Involvement from './involvement.js'
+const involve = new Involvement;
 
 class Anime {
   constructor() {
@@ -34,8 +36,8 @@ class Anime {
             <span>Rating: ${item.rating.average}</span>
             <div class="card-actions commentButton">
               <button class="btn btn-primary commentBtn" data-id="${item.id}">Comment</button>
-              <i class="fa-solid fa-heart btn btn-secondary text-2xl font-bold"></i> 
-              <span class="text-4xl">1</span> 
+              <i id="${item.id}" class="fa-solid fa-heart btn btn-secondary text-2xl font-bold"></i> 
+              <span id="likes-${item.id}" class="text-4xl"></span> 
             </div>
           </div>
         </div>
@@ -59,6 +61,21 @@ class Anime {
           .catch((error) => console.error(error));
       });
     });
+
+
+  const likeButtons = document.querySelectorAll('.fa-heart');
+  likeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      console.log(button.id)
+      involve.postLikes(button.id)
+        .then(() => button.style.color = 'blue')
+        involve.displayLikes()
+        // .catch(() => button.style.color = 'blue')
+  //POST a like to the api item.id
+  //GET the api info and display it on main
+    })
+  }) 
+  involve.displayLikes()
   }
 
   getShowDetails(showId) {
@@ -66,6 +83,7 @@ class Anime {
       .then((response) => response.json())
       .catch((error) => console.error(error));
   }
+
 }
 
 export default Anime;
