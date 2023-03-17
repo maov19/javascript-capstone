@@ -1,17 +1,12 @@
-import { v4 as uuidv4 } from 'uuid';
-
 class Comment {
   constructor() {
     this.appId = 'VASVN7B36M4wHn663o4j';
     this.baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-    this.itemIds = []
   }
 
-
-
-  postComment(username, comment) {
+  postComment(itemId, username, comment) {
     const url = `${this.baseURL}/apps/${this.appId}/comments`;
-    const itemId = uuidv4();
+
     const body = { item_id: itemId, username, comment };
 
     return new Promise((resolve, reject) => {
@@ -20,14 +15,14 @@ class Comment {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       })
-        .then(response => {
+        .then((response) => {
           if (response.ok) {
             resolve(response.status);
           } else {
             throw new Error(`Failed to create comment: ${response.status}`);
           }
         })
-        .catch(error => {
+        .catch((error) => {
           console.error(error);
           reject(new Error('Failed to create comment'));
         });
@@ -39,18 +34,16 @@ class Comment {
 
     return new Promise((resolve, reject) => {
       fetch(url)
-        .then(response => {
+        .then((response) => {
           if (response.ok) {
             return response.json();
-          } else {
-            throw new Error(`Failed to get comments: ${response.status}`);
           }
+          throw new Error(`Failed to get comments: ${response.status}`);
         })
-        .then(data => {
-          console.log(data)
-          resolve(data)
+        .then((data) => {
+          resolve(data);
         })
-        .catch(error => {
+        .catch((error) => {
           console.error(error);
           reject(new Error('Failed to get comments'));
         });
@@ -60,18 +53,12 @@ class Comment {
   displayComments(itemId) {
     const container = document.getElementById('commentContainer');
     this.getComments(itemId)
-      .then(comments => {
+      .then((comments) => {
         if (comments.length > 0) {
           const list = document.createElement('ul');
-          comments.forEach(comment => {
+          comments.forEach((comment) => {
             const listItem = document.createElement('li');
-            const username = document.createElement('span');
-            username.textContent = comment.username;
-            const commentText = document.createElement('span');
-            commentText.textContent = comment.comment;
-            listItem.appendChild(username);
-            listItem.appendChild(document.createTextNode(': '));
-            listItem.appendChild(commentText);
+            listItem.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment} `;
             list.appendChild(listItem);
           });
           container.innerHTML = '';
@@ -80,7 +67,7 @@ class Comment {
           container.innerHTML = 'No comments yet.';
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
         container.innerHTML = 'Failed to load comments.';
       });

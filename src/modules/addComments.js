@@ -1,6 +1,6 @@
 import Comment from './Comment.js';
 
-const addComments = () => {
+const addComments = (itemId) => {
   const commentForm = document.getElementById('commentForm');
   const inputName = document.getElementById('inputName');
   const inputComment = document.getElementById('inputComment');
@@ -8,7 +8,7 @@ const addComments = () => {
   commentForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const comment = new Comment();
-    comment.postComment(inputName.value, inputComment.value)
+    comment.postComment(itemId, inputName.value, inputComment.value)
       .then((response) => {
         console.log(response);
       })

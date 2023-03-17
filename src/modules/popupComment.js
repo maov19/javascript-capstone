@@ -60,7 +60,7 @@ const popupComment = (movieDetails) => {
   container.appendChild(description);
 
   const commentContainer = document.createElement('div');
-  commentContainer.id = 'commentContainer'
+  commentContainer.id = 'commentContainer';
   container.appendChild(commentContainer);
 
   const commentForm = document.createElement('form');
@@ -89,9 +89,11 @@ const popupComment = (movieDetails) => {
   closeBtn.addEventListener('click', () => {
     if (popupWindow) { popupWindow.classList.add('hidden'); }
   });
-  addComments();
-  const comment = new Comment()
-  comment.displayComments()
+
+  addComments(movieDetails.id);
+
+  const comment = new Comment();
+  comment.displayComments(movieDetails.id);
 };
 
 export default popupComment;
