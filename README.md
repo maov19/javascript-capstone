@@ -67,6 +67,8 @@ A single page app that displays a list of TV series, where users can react to ea
 
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
+- **Video presentation:**
+[Project video presentation](https://drive.google.com/file/d/1w5R-O9nEnb_wOGueQ1X8mesziPY2bjxr/view?usp=sharing)
 
 - **GitHub Pages:**
 [Live version](https://maov19.github.io/javascript-capstone/dist/)
