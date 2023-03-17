@@ -76,6 +76,7 @@ class Comment {
       .catch((error) => {
         console.error(error);
         container.innerHTML = '<b>No commets posted...</b>';
+
       });
   }
 }
