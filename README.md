@@ -157,7 +157,7 @@ You can deploy this project using:
 
 Shafiu Ibn Yushawu & Martin Ossa
 - GitHub: [@shafiuyushawu](https://github.com/shafiuyushawu)
-Martin Ossa
+
 - Twitter: [@shafiuyushawu](https://twitter.com/shafiuyushawu)
 
 - GitHub: [@maov19](https://github.com/maov19),
