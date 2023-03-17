@@ -159,7 +159,7 @@ Shafiu Ibn Yushawu & Martin Ossa
 
 - Twitter: [@shafiuyushawu](https://twitter.com/shafiuyushawu)
 
-- GitHub: [@maov19](https://github.com/maov19),
+- GitHub: [@maov19](https://github.com/maov19)
 - Twitter: [@maov08](https://twitter.com/@maov08)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -194,7 +194,7 @@ If you like this project, kindly follow me on GitHub 😊
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Much acknowledge goes to the creaters of both the [TVMaze API](https://api.tvmaze.com) and [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270) for making such resourceful API available for us.
+- Much acknowledgment goes to the creaters of both the [TVMaze API](https://api.tvmaze.com) and [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270) for making such resourceful API available for us to practice.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->
