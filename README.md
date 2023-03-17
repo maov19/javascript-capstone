@@ -23,7 +23,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Leaderboard] <a name="about-project"></a>
+# 📖 [Series Special] <a name="about-project"></a>
 
 A single page app that displays a list of TV series, where users can react to each series by liking or commenting on it.
 
