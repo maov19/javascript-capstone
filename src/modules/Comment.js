@@ -59,7 +59,7 @@ class Comment {
                     comments.forEach((comment) => {
                         const commentLists = document.createElement('li');
                         commentLists.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment} `;
-                        list.appendChild(listItem);
+                        list.appendChild(commentLists);
                     });
                     container.innerHTML = '';
                     container.appendChild(list);
