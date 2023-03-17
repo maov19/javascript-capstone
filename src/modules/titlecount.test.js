@@ -13,7 +13,7 @@ const titleCounter = (count) => {
   return count;
 };
 
-describe('Counting comments test', () => {
+describe('Counting items test', () => {
   test('counts with 3 items displayed', () => {
     document.body.innerHTML = "<div class='card-container'>"
     + "<div class='card-container'>"
