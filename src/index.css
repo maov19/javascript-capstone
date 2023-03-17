@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#commentForm {
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

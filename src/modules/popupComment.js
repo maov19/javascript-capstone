@@ -1,15 +1,14 @@
 import addComments from './addComments.js';
 import Comment from './Comment.js';
-import displayAllAnime from './displayAllAnime.js'
 
 const popupComment = (movieDetails) => {
   const main = document.getElementById('main');
 
   const mainContainer = document.createElement('div');
   mainContainer.className = 'fixed top-0 left-0 flex items-center justify-center  w-full h-screen bg-black bg-opacity-50 ';
-  mainContainer.id = 'popupWindow' + movieDetails.id;
+  mainContainer.id = `popupWindow${movieDetails.id}`;
   main.appendChild(mainContainer);
-  mainContainer.innerHTML = ''
+  mainContainer.innerHTML = '';
 
   const container = document.createElement('div');
   container.className = 'w-3/4 h-screen  px-16 bg-white rounded shadow-xl overflow-y my-16';
@@ -20,7 +19,7 @@ const popupComment = (movieDetails) => {
   const close = document.createElement('button');
   close.className = 'text-4xl font-bold closeWindow';
   close.innerHTML = '&cross;';
-  close.id = 'closeBtn' + movieDetails.id;
+  close.id = `closeBtn${movieDetails.id}`;
   container.appendChild(closeDiv);
   closeDiv.appendChild(close);
 
@@ -63,13 +62,13 @@ const popupComment = (movieDetails) => {
   container.appendChild(description);
 
   const commentContainer = document.createElement('div');
-  commentContainer.id = 'commentContainer';
+  commentContainer.id = `commentContainer${movieDetails.id}`;
   commentContainer.className = 'flex justify-center border-b my-2';
   container.appendChild(commentContainer);
 
   const commentForm = document.createElement('form');
   commentForm.className = '';
-  commentForm.id = 'commentForm';
+  commentForm.id = `commentForm${movieDetails.id}`;
   const inputName = document.createElement('input');
   inputName.id = 'inputName';
   inputName.className = 'text-xl input border border-black placeholder:text-black';
@@ -87,13 +86,9 @@ const popupComment = (movieDetails) => {
   commentForm.appendChild(inputComment);
   commentForm.appendChild(addButton);
 
-  // const popupWindow = document.getElementById('popupWindow');
-  // popupWindow.classList.remove('hidden');
-  const closeBtn = document.getElementById('closeBtn' + movieDetails.id);
+  const closeBtn = document.getElementById(`closeBtn${movieDetails.id}`);
   closeBtn.addEventListener('click', () => {
-
     mainContainer.classList.add('hidden');
-
   });
 
   addComments(movieDetails.id);

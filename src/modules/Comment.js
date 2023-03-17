@@ -51,7 +51,7 @@ class Comment {
   }
 
   displayComments(itemId) {
-    const container = document.getElementById('commentContainer');
+    const container = document.getElementById(`commentContainer${itemId}`);
 
     this.getComments(itemId)
       .then((comments) => {

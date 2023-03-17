@@ -1,7 +1,6 @@
 import popupComment from './popupComment.js';
 import titleCounter from './title-counter.js';
 import Involvement from './involvement.js';
-import displayAllAnime from './displayAllAnime.js';
 
 const involve = new Involvement();
 
@@ -59,7 +58,7 @@ class Anime {
     commentButtons.forEach((button) => {
       button.addEventListener('click', () => {
         const showId = button.dataset.id;
-        const popupWindow = document.getElementById('popupWindow' + showId);
+        const popupWindow = document.getElementById(`popupWindow${showId}`);
         this.getShowDetails(showId)
           .then((details) => {
             console.log(details);
