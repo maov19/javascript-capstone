@@ -57,9 +57,9 @@ class Comment {
         if (comments.length > 0) {
           const list = document.createElement('ul');
           comments.forEach((comment) => {
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment} `;
-            list.appendChild(listItem);
+            const commentLists = document.createElement('li');
+            commentLists.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment} `;
+            list.appendChild(commentLists);
           });
           container.innerHTML = '';
           container.appendChild(list);
