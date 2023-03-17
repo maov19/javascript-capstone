@@ -156,6 +156,7 @@ You can deploy this project using:
 👤 **Authors**
 
 Shafiu Ibn Yushawu
+Martin Ossa
 - GitHub: [@shafiuyushawu](https://github.com/shafiuyushawu)
 Martin Ossa
 - Twitter: [@shafiuyushawu](https://twitter.com/shafiuyushawu)
