@@ -69,8 +69,7 @@ A single page app that displays a list of TV series. You can add likes and comme
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - **GitHub Pages:**
-Coming soon!
-
+[Live version](https://maov19.github.io/javascript-capstone/dist/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 
