@@ -196,7 +196,7 @@ If you like this project, kindly follow me on GitHub 😊
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- N/A
+- We will like to acknowledge the creaters of both the [TVMaze API](https://api.tvmaze.com) and [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270) for making API resources available.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->
