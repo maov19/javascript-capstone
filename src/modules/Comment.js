@@ -51,11 +51,17 @@ class Comment {
   }
 
   displayComments(itemId) {
-    const container = document.getElementById('commentContainer');
+    const container = document.getElementById(`commentContainer${itemId}`);
+
     this.getComments(itemId)
       .then((comments) => {
         if (comments.length > 0) {
+          console.log(comments.length);
           const list = document.createElement('ul');
+          const commentCounter = document.createElement('h2');
+          commentCounter.className = 'text-center text-xl';
+          commentCounter.innerHTML = `<b>Comments</b> <b>(</b>${comments.length}<b>)</b>`;
+          list.appendChild(commentCounter);
           comments.forEach((comment) => {
             const commentLists = document.createElement('li');
             commentLists.innerHTML = `${comment.creation_date} ${comment.username}: ${comment.comment} `;
@@ -69,7 +75,7 @@ class Comment {
       })
       .catch((error) => {
         console.error(error);
-        container.innerHTML = 'Failed to load comments.';
+        container.innerHTML = '<b>No commets posted...</b>';
       });
   }
 }
