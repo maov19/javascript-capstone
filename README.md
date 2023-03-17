@@ -96,7 +96,7 @@ git clone https://github.com/maov19/javascript-capstone/
 ```
 2. To access cloned directory run:
 ```bash
-cd leaderboard
+cd javascript-capstone
 ```
 
 
