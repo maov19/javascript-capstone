@@ -25,7 +25,7 @@
 
 # 📖 [Leaderboard] <a name="about-project"></a>
 
-A single page app that displays a list of TV series. You can add likes and comments.
+A single page app that displays a list of TV series, where users can react to each series by liking or commenting on it.
 
 ## 🛠 Built With 
 
