@@ -145,7 +145,8 @@ npx eslint .
 
 You can deploy this project using:
 
--Coming soon!
+- GitHub pages: [Live](https://maov19.github.io/javascript-capstone/dist/)
+- Vercel 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHOR -->
