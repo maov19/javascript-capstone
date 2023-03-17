@@ -8,13 +8,15 @@ const addComments = (itemId) => {
   commentForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const comment = new Comment();
-    comment.postComment(itemId, inputName.value, inputComment.value)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    if (inputName.value.length !== 0 && inputComment.value.length) {
+      comment.postComment(itemId, inputName.value, inputComment.value)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
   });
 };
 
