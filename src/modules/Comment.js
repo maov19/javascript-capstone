@@ -59,7 +59,7 @@ class Comment {
           console.log(comments.length);
           const list = document.createElement('ul');
           const commentCounter = document.createElement('h2');
-          commentCounter.className = 'text-center text-xl';
+          commentCounter.className = 'text-xl text-center';
           commentCounter.innerHTML = `<b>Comments</b> <b>(</b>${comments.length}<b>)</b>`;
           list.appendChild(commentCounter);
           comments.forEach((comment) => {
