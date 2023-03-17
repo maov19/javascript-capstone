@@ -1,4 +1,5 @@
 import addComments from './addComments.js';
+import Comment from './Comment.js';
 
 const popupComment = (movieDetails) => {
   const main = document.getElementById('main');
@@ -59,6 +60,7 @@ const popupComment = (movieDetails) => {
   container.appendChild(description);
 
   const commentContainer = document.createElement('div');
+  commentContainer.id = 'commentContainer'
   container.appendChild(commentContainer);
 
   const commentForm = document.createElement('form');
@@ -88,6 +90,8 @@ const popupComment = (movieDetails) => {
     if (popupWindow) { popupWindow.classList.add('hidden'); }
   });
   addComments();
+  const comment = new Comment()
+  comment.displayComments()
 };
 
 export default popupComment;
