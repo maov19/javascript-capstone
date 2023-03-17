@@ -1,5 +1,5 @@
 {
-  "name": "leaderboard",
+  "name": "javascript-capstone",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shafiuyushawu/leaderboard.git"
+    "url": "git+https://github.com/maov19/javascript-capstone.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shafiuyushawu/leaderboard/issues"
+    "url": "https://github.com/maov19/javascript-capstone/issues"
   },
-  "homepage": "https://github.com/shafiuyushawu/leaderboard#readme",
+  "homepage": "https://github.com/maov19/javascript-capstone/#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
     "babel-eslint": "^10.1.0",

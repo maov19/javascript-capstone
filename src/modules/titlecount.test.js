@@ -16,15 +16,15 @@ const titleCounter = (count) => {
 describe('Counting items test', () => {
   test('counts with 3 items displayed', () => {
     document.body.innerHTML = "<div class='card-container'>"
-    + "<div class='card-container'>"
-    + "<div class='card-container'>";
+      + "<div class='card-container'>"
+      + "<div class='card-container'>";
     expect(titleCounter()).toBe(3);
   });
 
   test('counts with 0 items displayed', () => {
     document.body.innerHTML = "<div class='card-'>"
-    + "<div class='card-'>"
-    + "<div class='card-'>";
+      + "<div class='card-'>"
+      + "<div class='card-'>";
     expect(titleCounter()).toBe('No new titles');
   });
 
