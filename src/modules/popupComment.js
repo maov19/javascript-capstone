@@ -1,13 +1,15 @@
 import addComments from './addComments.js';
 import Comment from './Comment.js';
+import displayAllAnime from './displayAllAnime.js'
 
 const popupComment = (movieDetails) => {
   const main = document.getElementById('main');
 
   const mainContainer = document.createElement('div');
-  mainContainer.className = 'fixed top-0 left-0 flex items-center justify-center hidden w-full h-screen bg-black bg-opacity-50 ';
-  mainContainer.id = 'popupWindow';
+  mainContainer.className = 'fixed top-0 left-0 flex items-center justify-center  w-full h-screen bg-black bg-opacity-50 ';
+  mainContainer.id = 'popupWindow' + movieDetails.id;
   main.appendChild(mainContainer);
+  mainContainer.innerHTML = ''
 
   const container = document.createElement('div');
   container.className = 'w-3/4 h-screen  px-16 bg-white rounded shadow-xl overflow-y my-16';
@@ -18,7 +20,7 @@ const popupComment = (movieDetails) => {
   const close = document.createElement('button');
   close.className = 'text-4xl font-bold closeWindow';
   close.innerHTML = '&cross;';
-  close.id = 'closeBtn';
+  close.id = 'closeBtn' + movieDetails.id;
   container.appendChild(closeDiv);
   closeDiv.appendChild(close);
 
@@ -85,15 +87,16 @@ const popupComment = (movieDetails) => {
   commentForm.appendChild(inputComment);
   commentForm.appendChild(addButton);
 
-  const popupWindow = document.getElementById('popupWindow');
-  popupWindow.classList.remove('hidden');
-  const closeBtn = document.getElementById('closeBtn');
+  // const popupWindow = document.getElementById('popupWindow');
+  // popupWindow.classList.remove('hidden');
+  const closeBtn = document.getElementById('closeBtn' + movieDetails.id);
   closeBtn.addEventListener('click', () => {
-    if (popupWindow) { popupWindow.classList.add('hidden'); }
+
+    mainContainer.classList.add('hidden');
+
   });
 
   addComments(movieDetails.id);
-
   const comment = new Comment();
   comment.displayComments(movieDetails.id);
 };
