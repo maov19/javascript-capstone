@@ -168,8 +168,9 @@ Shafiu Ibn Yushawu & Martin Ossa
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Adapt for mobile version
-- Link to IMDB
+- Responsiveness for mobile version
+- Functionality to request for reservations 
+- Functionality to link movie to IMDB movies
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
