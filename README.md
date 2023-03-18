@@ -23,9 +23,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Leaderboard] <a name="about-project"></a>
+# 📖 [Series Special] <a name="about-project"></a>
 
-A single page app that displays a list of TV series. You can add likes and comments.
+A single page app that displays a list of TV series, where users can react to each series by liking or commenting on it.
 
 ## 🛠 Built With 
 
@@ -68,10 +68,11 @@ A single page app that displays a list of TV series. You can add likes and comme
 
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
+- **Video presentation:**
+[Project video presentation](https://drive.google.com/file/d/1w5R-O9nEnb_wOGueQ1X8mesziPY2bjxr/view?usp=sharing)
 
 - **GitHub Pages:**
-Coming soon!
-
+[Live version](https://maov19.github.io/javascript-capstone/dist/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 
@@ -147,7 +148,8 @@ npx eslint .
 
 You can deploy this project using:
 
--Coming soon!
+- GitHub pages: [Live](https://maov19.github.io/javascript-capstone/dist/)
+- Vercel 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHOR -->
@@ -161,7 +163,7 @@ Shafiu Ibn Yushawu & Martin Ossa
 
 - Twitter: [@shafiuyushawu](https://twitter.com/shafiuyushawu)
 
-- GitHub: [@maov19](https://github.com/maov19),
+- GitHub: [@maov19](https://github.com/maov19)
 - Twitter: [@maov08](https://twitter.com/@maov08)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -169,8 +171,9 @@ Shafiu Ibn Yushawu & Martin Ossa
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Adapt for mobile version
-- Link to IMDB
+- Responsiveness for mobile version
+- Functionality to request for reservations 
+- Functionality to link movie to IMDB movies
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,7 +199,7 @@ If you like this project, kindly follow me on GitHub 😊
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Much acknowledge goes to the creaters of both the [TVMaze API](https://api.tvmaze.com) and [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270) for making such resourceful API available for us.
+- Much acknowledgment goes to the creaters of both the [TVMaze API](https://api.tvmaze.com) and [Involvement API](https://microverse.notion.site/Involvement-API-869e60b5ad104603aa6db59e08150270) for making such resourceful API available for us to practice.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->
