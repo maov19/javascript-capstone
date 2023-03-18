@@ -12,13 +12,11 @@ class Anime {
   getShows() {
     return fetch(`${this.baseURL}/shows`)
       .then((response) => response.json())
-      .catch((error) => console.error(error));
   }
 
   getAnimes() {
     return this.getShows()
       .then((shows) => shows.slice(50, 90))
-      .catch((error) => console.error(error));
   }
 
   displayAnime = (items) => {
@@ -54,21 +52,18 @@ class Anime {
     titleCounter();
 
     const commentButtons = document.querySelectorAll('.commentBtn');
-    // const popupWindow = document.getElementById('popupWindow');
     commentButtons.forEach((button) => {
       button.addEventListener('click', () => {
         const showId = button.dataset.id;
         const popupWindow = document.getElementById(`popupWindow${showId}`);
         this.getShowDetails(showId)
           .then((details) => {
-            console.log(details);
             if (!popupWindow) {
               popupComment(details);
             } else {
               popupWindow.classList.remove('hidden');
             }
           })
-          .catch((error) => console.error(error));
       });
     });
 
@@ -77,7 +72,6 @@ class Anime {
       button.addEventListener('click', () => {
         involve.postLikes(button.id)
           .then(() => involve.displayLikes())
-          .catch((error) => console.error(error));
       });
     });
     involve.displayLikes();
@@ -86,7 +80,6 @@ class Anime {
   getShowDetails(showId) {
     return fetch(`${this.baseURL}/shows/${showId}`)
       .then((response) => response.json())
-      .catch((error) => console.error(error));
   }
 }
 
