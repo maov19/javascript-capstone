@@ -40,7 +40,7 @@ A single page app that displays a list of TV series, where users can react to ea
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">N/A</a></li>
+    <li><a href="#"></a></li>
   </ul>
 </details>
 
