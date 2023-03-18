@@ -22,7 +22,7 @@ class Comment {
             throw new Error(`Failed to create comment: ${response.status}`);
           }
         })
-        .catch((error) => {
+        .catch(() => {
           reject(new Error('Failed to create comment'));
         });
     });
@@ -42,7 +42,7 @@ class Comment {
         .then((data) => {
           resolve(data);
         })
-        .catch((error) => {
+        .catch(() => {
           reject(new Error('Failed to get comments'));
         });
     });
@@ -70,7 +70,7 @@ class Comment {
           container.innerHTML = 'No comments yet.';
         }
       })
-      .catch((error) => {
+      .catch(() => {
         container.innerHTML = '<b>No commets posted...</b>';
       });
   }

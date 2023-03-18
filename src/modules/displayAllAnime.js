@@ -6,6 +6,6 @@ const displayAllAnime = () => {
     .then((data) => {
       anime.displayAnime(data);
     })
-    .catch((error) => console.error(error));
+    .catch((error) => error(error));
 };
 export default displayAllAnime;
