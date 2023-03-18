@@ -29,12 +29,12 @@ A single page app that displays a list of TV series, where users can react to ea
 
 ## 🛠 Built With 
 
-### Tech Stack <a name="tech-stack">N/A</a>
+### Tech Stack <a name="tech-stack"></a>
 - HTML
 - JS
 - Tailwind CSS
 
-### Database <a name="data-base">N/A</a>
+### Database <a name="data-base"></a>
 - API dependdencies
 
 <details>
