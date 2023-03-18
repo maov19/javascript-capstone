@@ -11,12 +11,12 @@ class Anime {
 
   getShows() {
     return fetch(`${this.baseURL}/shows`)
-      .then((response) => response.json())
+      .then((response) => response.json());
   }
 
   getAnimes() {
     return this.getShows()
-      .then((shows) => shows.slice(50, 90))
+      .then((shows) => shows.slice(50, 90));
   }
 
   displayAnime = (items) => {
@@ -63,7 +63,7 @@ class Anime {
             } else {
               popupWindow.classList.remove('hidden');
             }
-          })
+          });
       });
     });
 
@@ -71,7 +71,7 @@ class Anime {
     likeButtons.forEach((button) => {
       button.addEventListener('click', () => {
         involve.postLikes(button.id)
-          .then(() => involve.displayLikes())
+          .then(() => involve.displayLikes());
       });
     });
     involve.displayLikes();
@@ -79,7 +79,7 @@ class Anime {
 
   getShowDetails(showId) {
     return fetch(`${this.baseURL}/shows/${showId}`)
-      .then((response) => response.json())
+      .then((response) => response.json());
   }
 }
 

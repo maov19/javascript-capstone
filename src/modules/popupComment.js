@@ -3,15 +3,26 @@ import Comment from './Comment.js';
 
 const popupComment = (movieDetails) => {
   const main = document.getElementById('main');
+  const body = document.querySelector('body');
+  body.classList.add('popup-open');
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .popup-open .popup-modal {
+      overflow-y: auto;
+    }
+  `;
+  document.head.appendChild(style);
 
   const mainContainer = document.createElement('div');
-  mainContainer.className = 'fixed top-0 left-0 flex items-center justify-center  w-full h-screen bg-black bg-opacity-50 ';
+  mainContainer.className = 'fixed top-0 left-0 flex items-center justify-center w-full h-screen bg-black bg-opacity-50';
   mainContainer.id = `popupWindow${movieDetails.id}`;
+  mainContainer.classList.add('popup-open');
   main.appendChild(mainContainer);
   mainContainer.innerHTML = '';
 
   const container = document.createElement('div');
-  container.className = 'w-3/4 h-screen  px-16 bg-white rounded shadow-xl overflow-y my-16';
+  container.className = 'w-3/4 h-screen px-16 py-16 bg-white rounded shadow-xl ';
+  container.style.overflowY = 'auto';
   mainContainer.appendChild(container);
 
   const closeDiv = document.createElement('div');
@@ -24,7 +35,7 @@ const popupComment = (movieDetails) => {
   closeDiv.appendChild(close);
 
   const movieDiv = document.createElement('div');
-  movieDiv.className = 'grid grid-rows-1 justify-center';
+  movieDiv.className = 'grid justify-center grid-rows-1';
   const movieImg = document.createElement('img');
   movieImg.src = movieDetails.image.medium;
   movieImg.alt = movieDetails.name;
@@ -41,7 +52,7 @@ const popupComment = (movieDetails) => {
 
   const movieObjDiv = document.createElement('div');
   container.appendChild(movieObjDiv);
-  movieObjDiv.className = 'grid grid-cols-2  text-center';
+  movieObjDiv.className = 'grid grid-cols-2 text-center';
 
   const genre = document.createElement('span');
   genre.innerHTML = `<b>Genre: </b>${movieDetails.genres}`;
@@ -57,13 +68,13 @@ const popupComment = (movieDetails) => {
   movieObjDiv.appendChild(premiered);
 
   const description = document.createElement('div');
-  description.className = 'text-sm border-t border-b py-1';
+  description.className = 'py-1 text-sm border-t border-b';
   description.innerHTML = movieDetails.summary;
   container.appendChild(description);
 
   const commentContainer = document.createElement('div');
   commentContainer.id = `commentContainer${movieDetails.id}`;
-  commentContainer.className = 'flex justify-center border-b my-2';
+  commentContainer.className = 'flex justify-center my-2 border-b';
   container.appendChild(commentContainer);
 
   const commentForm = document.createElement('form');
@@ -71,11 +82,11 @@ const popupComment = (movieDetails) => {
   commentForm.id = `commentForm${movieDetails.id}`;
   const inputName = document.createElement('input');
   inputName.id = 'inputName';
-  inputName.className = 'text-xl input border border-black placeholder:text-black';
+  inputName.className = 'text-xl border border-black input placeholder:text-black';
   inputName.placeholder = 'Your name';
   const inputComment = document.createElement('textarea');
   inputComment.id = 'inputComment';
-  inputComment.className = 'text-xl textarea border border-black placeholder:text-black';
+  inputComment.className = 'text-xl border border-black textarea placeholder:text-black';
   inputComment.placeholder = 'Your insights...';
   const addButton = document.createElement('button');
   addButton.type = 'submit';
@@ -89,6 +100,9 @@ const popupComment = (movieDetails) => {
   const closeBtn = document.getElementById(`closeBtn${movieDetails.id}`);
   closeBtn.addEventListener('click', () => {
     mainContainer.classList.add('hidden');
+    mainContainer.classList.remove('popup-open');
+    body.classList.remove('popup-open');
+    document.head.removeChild(style);
   });
 
   addComments(movieDetails.id);

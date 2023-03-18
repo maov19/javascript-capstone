@@ -10,7 +10,9 @@
     "start": "webpack serve --mode development --open"
   },
   "jest": {
-    "setupFiles": ["jest-canvas-mock"]
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
   },
   "repository": {
     "type": "git",

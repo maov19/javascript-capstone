@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import Comment from './Comment';
+import Comment from './Comment.js';
 
 describe('Comment', () => {
   const comment = new Comment();
