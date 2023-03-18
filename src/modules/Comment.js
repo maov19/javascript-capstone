@@ -23,7 +23,6 @@ class Comment {
           }
         })
         .catch((error) => {
-          console.error(error);
           reject(new Error('Failed to create comment'));
         });
     });
@@ -44,7 +43,6 @@ class Comment {
           resolve(data);
         })
         .catch((error) => {
-          console.error(error);
           reject(new Error('Failed to get comments'));
         });
     });
@@ -56,7 +54,6 @@ class Comment {
     this.getComments(itemId)
       .then((comments) => {
         if (comments.length > 0) {
-          console.log(comments.length);
           const list = document.createElement('ul');
           const commentCounter = document.createElement('h2');
           commentCounter.className = 'text-xl text-center';
@@ -74,7 +71,6 @@ class Comment {
         }
       })
       .catch((error) => {
-        console.error(error);
         container.innerHTML = '<b>No commets posted...</b>';
       });
   }
