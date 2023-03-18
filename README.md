@@ -29,12 +29,13 @@ A single page app that displays a list of TV series. You can add likes and comme
 
 ## 🛠 Built With 
 
+### Tech Stack <a name="tech-stack">N/A</a>
 - HTML
 - JS
 - Tailwind CSS
-- API dependdencies
 
-### Tech Stack <a name="tech-stack">N/A</a>
+### Database <a name="data-base">N/A</a>
+- API dependdencies
 
 <details>
   <summary>Client</summary>
