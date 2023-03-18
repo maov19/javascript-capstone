@@ -9,3 +9,8 @@ form {
   padding: 0 10rem;
   gap: 1.5rem;
 }
+
+body.popup-open {
+  overflow: hidden;
+}
+
