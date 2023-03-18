@@ -2,9 +2,7 @@ import Comment from './Comment.js';
 
 const addComments = (itemId) => {
   const commentForm = document.getElementById(`commentForm${itemId}`);
-  // const inputName = document.getElementById('inputName');
-  // const inputComment = document.getElementById('inputComment');
-
+  
   commentForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const comment = new Comment();
