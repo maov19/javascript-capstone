@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import titleCounter from './title-counter.js'
+import titleCounter from './title-counter.js';
 
 describe('titleCounter', () => {
   beforeEach(() => {
@@ -14,7 +14,7 @@ describe('titleCounter', () => {
     const mockCounter = {
       innerText: '',
     };
-    const mockQuerySelectorAll = jest.fn(() => [      { title: 'Title 1' },      { title: 'Title 2' },      { title: 'Title 3' },    ]);
+    const mockQuerySelectorAll = jest.fn(() => [{ title: 'Title 1' }, { title: 'Title 2' }, { title: 'Title 3' }]);
     document.getElementById = jest.fn(() => mockCounter);
     document.querySelectorAll = mockQuerySelectorAll;
 

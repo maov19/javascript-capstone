@@ -13,5 +13,4 @@ const titleCounter = (count) => {
   return count;
 };
 
-
 export default titleCounter;

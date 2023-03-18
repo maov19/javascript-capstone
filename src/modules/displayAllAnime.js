@@ -5,6 +5,6 @@ const displayAllAnime = () => {
   anime.getAnimes()
     .then((data) => {
       anime.displayAnime(data);
-    })
+    });
 };
 export default displayAllAnime;
