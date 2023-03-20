@@ -39,7 +39,7 @@ const popupComment = (movieDetails) => {
   const movieImg = document.createElement('img');
   movieImg.src = movieDetails.image.medium;
   movieImg.alt = movieDetails.name;
-  movieImg.id = 'movieImg'
+  movieImg.id = 'movieImg';
   movieDiv.appendChild(movieImg);
   container.appendChild(movieDiv);
 

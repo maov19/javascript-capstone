@@ -1,8 +1,8 @@
-import logo from '../assets/movie.png'
+import logo from '../assets/movie.png';
 
 const header = () => {
-    const header = document.getElementById('header')
-    header.innerHTML = `
+  const header = document.getElementById('header');
+  header.innerHTML = `
     <nav class="flex justify-center items-center navbar bg-base-content text-primary-content">
         <div class="">
             <div class="avatar">
@@ -14,5 +14,5 @@ const header = () => {
         </div>
     </nav>
 `;
-}
-export default header
+};
+export default header;
