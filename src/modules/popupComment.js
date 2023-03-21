@@ -21,7 +21,7 @@ const popupComment = (movieDetails) => {
   mainContainer.innerHTML = '';
 
   const container = document.createElement('div');
-  container.className = 'w-3/4 h-screen px-16 py-16 bg-white rounded shadow-xl ';
+  container.className = 'w-1/2 h-screen px-16 py-16 bg-white rounded shadow-xl md:w-3/4';
   container.style.overflowY = 'auto';
   mainContainer.appendChild(container);
 
@@ -39,6 +39,7 @@ const popupComment = (movieDetails) => {
   const movieImg = document.createElement('img');
   movieImg.src = movieDetails.image.medium;
   movieImg.alt = movieDetails.name;
+  movieImg.id = 'movieImg';
   movieDiv.appendChild(movieImg);
   container.appendChild(movieDiv);
 

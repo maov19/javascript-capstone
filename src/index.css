@@ -6,7 +6,6 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 10rem;
   gap: 1.5rem;
 }
 

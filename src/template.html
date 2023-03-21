@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Webpack App</title>
+    <title>Movie series</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/5e67ba493b.js" crossorigin="anonymous"></script>
     <script defer src="buldle43769c8c129df5c0aac5.js"></script>
@@ -11,46 +11,13 @@
 </head>
 
 <body class="mx-50">
-    <header>
-        <div class="flex justify-center text-2xl text-white bg-black dark:bg-gray-800">
-            <div class="navbar-center ">
-                <div class="avatar">
-                    <div class="w-24 mask mask-squircle">
-                        <img id="logo" alt="website-logo">
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar-center lg:flex">
-                <ul class="px-1 text-xl menu menu-horizontal">
-                    <li><a>Home</a></li>
-                    <li><a>Comment</a></li>
-                    <li><a>Movies (<span id="counter"></span>)</a></li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
+    <header id="header" class=""></header>
     <main id="main">
-        <div id="display-container" class="grid items-center justify-center grid-cols-4 "></div>
+        <div id="display-container" class="grid items-center justify-center grid-cols md:grid-cols-2 lg:grid-cols-4">
+        </div>
     </main>
-    <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://microverse.com/"
-                class="hover:underline">Microverse</a>. All Rights Reserved.
-        </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-            <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
-            </li>
-            <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline">Contact</a>
-            </li>
-        </ul>
+    <footer id="footer"
+        class="flex flex-col justify-around p-10 md:flex-row md:flex footer footer-center bg-base-content text-primary-content ">
     </footer>
 </body>
 
